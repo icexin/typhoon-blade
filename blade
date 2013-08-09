@@ -69,6 +69,7 @@ function _full_real_path()
     return 0
 }
 
+BLADE_AUTO_UPGRADE=no
 blade_path=`_full_real_path $0`
 blade_dir=$(cd $(dirname $blade_path) && pwd)
 blade_file="$blade_dir/bootstrap.py"

@@ -90,6 +90,7 @@ class BladeConfig(object):
                 'optimize': [],
                 'benchmark_libs': [],
                 'benchmark_main_libs': [],
+                'hostname':''
             }
         }
 

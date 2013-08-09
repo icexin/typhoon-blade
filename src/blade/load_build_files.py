@@ -32,6 +32,8 @@ import java_targets
 import py_targets
 import thrift_library
 
+from pkg_download import download_pkg
+
 
 class TargetAttributes(object):
     """Build target attributes
@@ -125,7 +127,8 @@ def _load_build_file(source_dir, action_if_fail, processed_source_dirs, blade):
     processed_source_dirs.add(source_dir)
 
     if not os.path.exists(source_dir):
-        _report_not_exist(source_dir, source_dir, blade)
+        download_pkg(source_dir)
+        #_report_not_exist(source_dir, source_dir, blade)
 
     old_current_source_path = blade.get_current_source_path()
     blade.set_current_source_path(source_dir)
